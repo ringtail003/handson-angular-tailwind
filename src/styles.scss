@@ -1,3 +1,156 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@import './demo.scss';
+
+:root {
+  --base-font-size: 14px;
+  --base-font-color: #1F2937;
+}
+
+@layer base {
+  html {
+    font-size: var(--base-font-size);
+    color: var(--base-font-color);
+  }
+  h1 {
+    @apply text-3xl pb-8;
+  }
+  h2 {
+    @apply text-2xl pb-4;
+  }
+  h3 {
+    @apply text-xl pb-2;
+  }
+}
+
+@layer components {
+  .ui-button {
+    @apply py-2 px-4 rounded-md;
+    @apply outline-none focus:ring-offset-2 focus:ring-2;
+
+    &.ui-disabled {
+      @apply opacity-50 pointer-events-none cursor-not-allowed;
+    }
+    &.ui-busy .ui-busy-false {
+      @apply hidden;
+    }
+    &:not(.ui-busy) .ui-busy-true {
+      @apply hidden;
+    }
+    &.ui-shrink {
+      @apply py-1.5 px-2 text-xs;
+    }
+
+    &.ui-fill-blue {
+      @apply text-white bg-blue-600 border border-blue-600 hover:bg-blue-800 focus:ring-blue-600;
+    }
+    &.ui-fill-gray {
+      @apply text-white bg-gray-600 border border-gray-600 hover:bg-gray-800 focus:ring-gray-600;
+    }
+    &.ui-fill-red {
+      @apply text-white bg-red-600 border border-red-600 hover:bg-red-800 focus:ring-red-600;
+    }
+
+    &.ui-outline-blue {
+      @apply bg-white border hover:text-white border-blue-600 text-blue-600 hover:bg-blue-600 focus:ring-blue-600;
+    }
+    &.ui-outline-gray {
+      @apply bg-white border hover:text-white border-gray-600 text-gray-600 hover:bg-gray-600 focus:ring-gray-600;
+    }
+    &.ui-outline-red {
+      @apply bg-white border hover:text-white border-red-600 text-red-600 hover:bg-red-600 focus:ring-red-600;
+    }
+
+    &.ui-transparent-blue {
+      @apply border border-white text-blue-600 hover:text-blue-800 hover:underline;
+    }
+    &.ui-transparent-gray {
+      @apply border border-white text-gray-600 hover:text-gray-800 hover:underline;
+    }
+    &.ui-transparent-red {
+      @apply border border-white text-red-600 hover:text-red-800 hover:underline;
+    }
+  }
+
+  .ui-input-text {
+    @apply outline-none focus:ring-2 focus:ring-blue-600 focus:border-white border border-gray-500 p-2.5 rounded-md;
+
+    &.ui-disabled {
+      @apply opacity-50 pointer-events-none cursor-not-allowed;
+    }
+    &.ui-invalid {
+      @apply focus:ring-red-500 focus:ring-1 border-red-500 placeholder-red-300 text-red-600;
+    }
+  }
+
+  .ui-input-checkbox {
+    @apply w-5 h-5 focus:ring-blue-600 focus:ring-offset-2;
+
+    &.ui-disabled {
+      @apply opacity-50 pointer-events-none cursor-not-allowed;
+    }
+  }
+
+  .ui-input-radio {
+    @apply w-5 h-5 focus:ring-blue-600 focus:ring-1 outline-none;
+
+    &.ui-disabled {
+      @apply opacity-50 pointer-events-none cursor-not-allowed;
+    }
+  }
+
+  .ui-label-brand {
+    @apply px-3 py-0 rounded-xl;
+
+    &.ui-disabled {
+      @apply opacity-50;
+    }
+
+    &.ui-fill-product {
+      @apply text-sm border text-product-600 bg-product-100 border-product-100;
+    }
+    &.ui-fill-foo {
+      @apply text-sm border text-foo-600 bg-foo-100 border-foo-100;
+    }
+    &.ui-fill-bar {
+      @apply text-sm border text-bar-600 bg-bar-100 border-bar-100;
+    }
+    &.ui-fill-generic {
+      @apply text-sm border text-gray-600 bg-gray-100 border-gray-100;
+    }
+
+    &.ui-outline-product {
+      @apply text-sm bg-white border text-product-600 border-product-600;
+    }
+    &.ui-outline-foo {
+      @apply text-sm bg-white border text-foo-600 border-foo-600;
+    }
+    &.ui-outline-bar {
+      @apply text-sm bg-white border text-bar-600 border-bar-600;
+    }
+    &.ui-outline-generic {
+      @apply text-sm bg-white border text-gray-600 border-gray-600;
+    }
+  }
+
+  .ui-callout {
+    @apply text-callout-700 border border-callout-700 bg-callout-300 p-4 rounded-lg;
+
+    .ui-callout-caption {
+      @apply font-bold;
+      font-size: var(--base-font-size);
+    }
+    .ui-callout-body {
+      @apply leading-6;
+    }
+    .ui-callout-link {
+      @apply underline hover:text-callout-900;
+    }
+  }
+
+  .ui-loading {
+    @apply bg-gray-200 rounded-lg text-gray-400 p-10 text-sm flex gap-4 items-center justify-center;
+  }
+}
