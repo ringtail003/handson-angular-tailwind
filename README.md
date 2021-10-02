@@ -1,4 +1,4 @@
-[https://qiita.com/ringtail003/items/1f460643ca3a23c2a020](Angular 12 にシュッと tailwindcss を導入する) の記事を書いた時にカスタマイズを手元で試したリポジトリです。
+[Angular 12 にシュッと tailwindcss を導入する](https://qiita.com/ringtail003/items/1f460643ca3a23c2a020) の記事を書いた時にカスタマイズを手元で試したリポジトリです。
 
 ```sh
 # Node 16.8
