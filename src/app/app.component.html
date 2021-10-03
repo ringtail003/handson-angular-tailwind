@@ -20,85 +20,98 @@
 
   <p class="tagname">Fill</p>
   <div class="flex gap-4">
-    <button class="ui-button ui-fill-blue">テスト</button>
-    <button class="ui-button ui-fill-gray">テスト</button>
-    <button class="ui-button ui-fill-red">テスト</button>
-    <button class="ui-button ui-fill-blue ui-disabled">Disabled</button>
-    <button
-      class="ui-button ui-fill-blue"
-      [class.ui-disabled]="busy"
-      [class.ui-busy]="busy"
+    <button class="ui-button ui-button-face-fill-blue">テスト</button>
+    <button class="ui-button ui-button-face-fill-gray">テスト</button>
+    <button class="ui-button ui-button-face-fill-red">テスト</button>
+    <button class="ui-button ui-button-face-fill-blue ui-button-disabled" disabled>Disabled</button>
+
+    <button class="ui-button ui-button-face-fill-blue" 
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
     >
-      <span class="ui-busy-false">Busy</span>
-      <spinner class="ui-busy-true w-5"></spinner>
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-5"></spinner>
     </button>
   </div>
 
-  <p class="tagname">Shrink</p>
+  <p class="tagname">Fill & Small</p>
   <div class="flex gap-4">
-    <button class="ui-button ui-fill-blue ui-shrink">テスト</button>
-    <button class="ui-button ui-fill-gray ui-shrink">テスト</button>
-    <button class="ui-button ui-fill-red ui-shrink">テスト</button>
-    <button class="ui-button ui-fill-blue ui-disabled ui-shrink">
-      Disabled
-    </button>
-    <button
-      class="ui-button ui-fill-blue ui-shrink"
-      [class.ui-disabled]="busy"
-      [class.ui-busy]="busy"
+    <button class="ui-button ui-button-size-sm ui-button-face-fill-blue">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-fill-gray">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-fill-red">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-fill-blue ui-button-disabled" disabled>Disabled</button>
+
+    <button class="ui-button ui-button-size-sm ui-button-face-fill-blue"
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
     >
-      <span class="ui-busy-false">Busy</span>
-      <spinner class="ui-busy-true w-4"></spinner>
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-4"></spinner>
     </button>
   </div>
 
   <p class="tagname">Outline</p>
   <div class="flex gap-4">
-    <button class="ui-button ui-outline-blue">テスト</button>
-    <button class="ui-button ui-outline-gray">テスト</button>
-    <button class="ui-button ui-outline-red">テスト</button>
-    <button class="ui-button ui-outline-blue ui-disabled">Disabled</button>
-    <button
-      class="ui-button ui-outline-blue"
-      [class.ui-disabled]="busy"
-      [class.ui-busy]="busy"
+    <button class="ui-button ui-button-face-outline-blue">テスト</button>
+    <button class="ui-button ui-button-face-outline-gray">テスト</button>
+    <button class="ui-button ui-button-face-outline-red">テスト</button>
+    <button class="ui-button ui-button-face-outline-blue ui-button-disabled" disabled>Disabled</button>
+
+    <button class="ui-button ui-button-face-outline-blue"
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
     >
-      <span class="ui-busy-false">Busy</span>
-      <spinner class="ui-busy-true w-5"></spinner>
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-4"></spinner>
     </button>
   </div>
 
-  <p class="tagname">Shrink & Outline</p>
+  <p class="tagname">Outline & Small</p>
   <div class="flex gap-4">
-    <button class="ui-button ui-outline-blue ui-shrink">テスト</button>
-    <button class="ui-button ui-outline-gray ui-shrink">テスト</button>
-    <button class="ui-button ui-outline-red ui-shrink">テスト</button>
-    <button class="ui-button ui-outline-blue ui-shrink ui-disabled">
-      Disabled
-    </button>
-    <button
-      class="ui-button ui-outline-blue ui-shrink"
-      [class.ui-disabled]="busy"
-      [class.ui-busy]="busy"
+    <button class="ui-button ui-button-size-sm ui-button-face-outline-blue">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-outline-gray">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-outline-red">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-outline-blue ui-button-disabled" disabled>Disabled</button>
+
+    <button class="ui-button ui-button-size-sm ui-button-face-outline-blue"
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
     >
-      <span class="ui-busy-false">Busy</span>
-      <spinner class="ui-busy-true w-4"></spinner>
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-4"></spinner>
     </button>
   </div>
 
-  <p class="tagname">Transparent</p>
+  <p class="tagname">Link</p>
   <div class="flex gap-4">
-    <button class="ui-button ui-transparent-blue">テスト</button>
-    <button class="ui-button ui-transparent-gray">テスト</button>
-    <button class="ui-button ui-transparent-red">テスト</button>
-    <button class="ui-button ui-transparent-blue ui-disabled">Disabled</button>
-    <button
-      class="ui-button ui-transparent-blue"
-      [class.ui-disabled]="busy"
-      [class.ui-busy]="busy"
+    <button class="ui-button ui-button-face-link-blue">テスト</button>
+    <button class="ui-button ui-button-face-link-gray">テスト</button>
+    <button class="ui-button ui-button-face-link-red">テスト</button>
+    <button class="ui-button ui-button-face-link-blue ui-button-disabled" disabled>Disabled
+    </button>
+
+    <button class="ui-button ui-button-face-link-blue"
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
     >
-      <span class="ui-busy-false">Busy</span>
-      <spinner class="ui-busy-true w-5"></spinner>
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-5"></spinner>
+    </button>
+  </div>
+
+  <p class="tagname">Link & Small</p>
+  <div class="flex gap-4">
+    <button class="ui-button ui-button-size-sm ui-button-face-link-blue">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-link-gray">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-link-red">テスト</button>
+    <button class="ui-button ui-button-size-sm ui-button-face-link-blue ui-button-disabled" disabled>Disabled</button>
+
+    <button class="ui-button ui-button-size-sm ui-button-face-link-blue"
+      [class.ui-button-disabled]="busy"
+      [disabled]="busy"
+    >
+      <span [class.hidden]="busy">Busy</span>
+      <spinner [class.hidden]="!busy" class="w-4"></spinner>
     </button>
   </div>
 </div>
@@ -108,45 +121,41 @@
   <p class="tagname">Text</p>
   <div class="flex gap-4">
     <input type="text" class="ui-input-text" placeholder="テスト" />
-    <input
-      type="text"
-      class="ui-input-text ui-disabled"
-      placeholder="Disabled"
-    />
-    <input type="text" class="ui-input-text ui-invalid" placeholder="Invalid" />
+    <input type="text" class="ui-input-text ui-input-text-disabled" placeholder="Disabled" disabled />
+    <input type="text" class="ui-input-text ui-input-text-invalid" placeholder="Invalid" />
   </div>
 
   <p class="tagname">Checkbox</p>
   <div class="flex gap-4">
     <input type="checkbox" class="ui-input-checkbox" />
-    <input type="checkbox" class="ui-input-checkbox ui-disabled" />
+    <input type="checkbox" class="ui-input-checkbox ui-input-checkbox-disabled" disabled />
   </div>
 
   <p class="tagname">Radio</p>
   <div class="flex gap-4">
     <input type="radio" name="radio" class="ui-input-radio" />
-    <input type="radio" name="radio" class="ui-input-radio ui-disabled" />
+    <input type="radio" name="radio" class="ui-input-radio ui-input-radio-disabled" disabled />
   </div>
 </div>
 
-<p class="title">Labels</p>
+<p class="title">Brand Labels</p>
 <div class="card">
   <p class="tagname">Fill</p>
   <div class="flex gap-4">
-    <span class="ui-label-brand ui-fill-product">Product</span>
-    <span class="ui-label-brand ui-fill-foo">Foo</span>
-    <span class="ui-label-brand ui-fill-bar">Bar</span>
-    <span class="ui-label-brand ui-fill-generic">Generic</span>
-    <span class="ui-label-brand ui-fill-product ui-disabled">Disabled</span>
+    <span class="ui-label-brand ui-label-brand-face-fill-product">Product</span>
+    <span class="ui-label-brand ui-label-brand-face-fill-foo">Foo</span>
+    <span class="ui-label-brand ui-label-brand-face-fill-bar">Bar</span>
+    <span class="ui-label-brand ui-label-brand-face-fill-generic">Generic</span>
+    <span class="ui-label-brand ui-label-brand-face-fill-product ui-label-brand-disabled">Disabled</span>
   </div>
 
   <p class="tagname">Outline</p>
   <div class="flex gap-4">
-    <span class="ui-label-brand ui-outline-product">Product</span>
-    <span class="ui-label-brand ui-outline-foo">Foo</span>
-    <span class="ui-label-brand ui-outline-bar">Bar</span>
-    <span class="ui-label-brand ui-outline-generic">Generic</span>
-    <span class="ui-label-brand ui-outline-product ui-disabled">Disabled</span>
+    <span class="ui-label-brand ui-label-brand-face-outline-product">Product</span>
+    <span class="ui-label-brand ui-label-brand-face-outline-foo">Foo</span>
+    <span class="ui-label-brand ui-label-brand-face-outline-bar">Bar</span>
+    <span class="ui-label-brand ui-label-brand-face-outline-generic">Generic</span>
+    <span class="ui-label-brand ui-label-brand-face-outline-product ui-label-brand-disabled">Disabled</span>
   </div>
 </div>
 

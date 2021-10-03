@@ -27,129 +27,133 @@
 
 @layer components {
   .ui-button {
-    @apply py-2 px-4 rounded-md;
-    @apply outline-none focus:ring-offset-2 focus:ring-2;
-
-    &.ui-disabled {
-      @apply opacity-50 pointer-events-none cursor-not-allowed;
-    }
-    &.ui-busy .ui-busy-false {
-      @apply hidden;
-    }
-    &:not(.ui-busy) .ui-busy-true {
-      @apply hidden;
-    }
-    &.ui-shrink {
-      @apply py-1.5 px-2 text-xs;
-    }
-
-    &.ui-fill-blue {
-      @apply text-white bg-blue-600 border border-blue-600 hover:bg-blue-800 focus:ring-blue-600;
-    }
-    &.ui-fill-gray {
-      @apply text-white bg-gray-600 border border-gray-600 hover:bg-gray-800 focus:ring-gray-600;
-    }
-    &.ui-fill-red {
-      @apply text-white bg-red-600 border border-red-600 hover:bg-red-800 focus:ring-red-600;
-    }
-
-    &.ui-outline-blue {
-      @apply bg-white border hover:text-white border-blue-600 text-blue-600 hover:bg-blue-600 focus:ring-blue-600;
-    }
-    &.ui-outline-gray {
-      @apply bg-white border hover:text-white border-gray-600 text-gray-600 hover:bg-gray-600 focus:ring-gray-600;
-    }
-    &.ui-outline-red {
-      @apply bg-white border hover:text-white border-red-600 text-red-600 hover:bg-red-600 focus:ring-red-600;
-    }
-
-    &.ui-transparent-blue {
-      @apply border border-white text-blue-600 hover:text-blue-800 hover:underline;
-    }
-    &.ui-transparent-gray {
-      @apply border border-white text-gray-600 hover:text-gray-800 hover:underline;
-    }
-    &.ui-transparent-red {
-      @apply border border-white text-red-600 hover:text-red-800 hover:underline;
-    }
+    @apply rounded-md outline-none ring-offset-2 focus:ring-2 border border-black py-2 px-4 bg-white;
   }
 
+  .ui-button-size-sm {
+    @apply py-1.5 px-2 text-xs;
+  }
+
+  .ui-button-face-fill-blue {
+    @apply text-white bg-blue-600 border border-blue-600 hover:bg-blue-800 focus:ring-blue-600;
+  }
+  .ui-button-face-fill-gray {
+    @apply text-white bg-gray-600 border border-gray-600 hover:bg-gray-800 focus:ring-gray-600;
+  }
+  .ui-button-face-fill-red {
+    @apply text-white bg-red-600 border border-red-600 hover:bg-red-800 hover:border-red-800 focus:ring-red-600;
+  }
+
+  .ui-button-face-outline-blue {
+    @apply bg-white border hover:text-white border-blue-600 text-blue-600 hover:bg-blue-600 focus:ring-blue-600;
+  }
+  .ui-button-face-outline-gray {
+    @apply bg-white border hover:text-white border-gray-600 text-gray-600 hover:bg-gray-600 focus:ring-gray-600;
+  }
+  .ui-button-face-outline-red {
+    @apply bg-white border hover:text-white border-red-600 text-red-600 hover:bg-red-600 focus:ring-red-600;
+  }
+
+  .ui-button-face-link-blue {
+    @apply border border-white text-blue-600 hover:text-blue-800 hover:underline focus:ring-blue-400;
+  }
+  .ui-button-face-link-gray {
+    @apply border border-white text-gray-600 hover:text-gray-800 hover:underline focus:ring-gray-400;
+  }
+  .ui-button-face-link-red {
+    @apply border border-white text-red-600 hover:text-red-800 hover:underline focus:ring-red-400;
+  }
+
+  .ui-button-disabled {
+    @apply opacity-50 pointer-events-none cursor-not-allowed;
+  }
+}
+
+@layer components {
   .ui-input-text {
     @apply outline-none focus:ring-2 focus:ring-blue-600 focus:border-white border border-gray-500 p-2.5 rounded-md;
-
-    &.ui-disabled {
-      @apply opacity-50 pointer-events-none cursor-not-allowed;
-    }
-    &.ui-invalid {
-      @apply focus:ring-red-500 focus:ring-1 border-red-500 placeholder-red-300 text-red-600;
-    }
   }
 
+  .ui-input-text-disabled {
+    @apply opacity-50 pointer-events-none cursor-not-allowed;
+  }
+  .ui-input-text-invalid {
+    @apply focus:ring-red-500 focus:ring-2 border-red-500 placeholder-red-300 text-red-600;
+  }
+}
+
+@layer components {
   .ui-input-checkbox {
-    @apply w-5 h-5 focus:ring-blue-600 focus:ring-offset-2;
-
-    &.ui-disabled {
-      @apply opacity-50 pointer-events-none cursor-not-allowed;
-    }
+    @apply w-5 h-5 focus:ring-blue-600 focus:ring-2 ring-offset-1;
   }
+  .ui-input-checkbox-disabled {
+    @apply opacity-50 pointer-events-none cursor-not-allowed;
+  }
+}
 
+@layer components {
   .ui-input-radio {
-    @apply w-5 h-5 focus:ring-blue-600 focus:ring-1 outline-none;
-
-    &.ui-disabled {
-      @apply opacity-50 pointer-events-none cursor-not-allowed;
-    }
+    @apply w-5 h-5 focus:ring-blue-600 focus:ring-2 ring-offset-1;
   }
 
+  .ui-input-radio-disabled {
+    @apply opacity-50 pointer-events-none cursor-not-allowed;
+  }
+}
+
+@layer components {
   .ui-label-brand {
-    @apply px-3 py-0 rounded-xl;
-
-    &.ui-disabled {
-      @apply opacity-50;
-    }
-
-    &.ui-fill-product {
-      @apply text-sm border text-product-600 bg-product-100 border-product-100;
-    }
-    &.ui-fill-foo {
-      @apply text-sm border text-foo-600 bg-foo-100 border-foo-100;
-    }
-    &.ui-fill-bar {
-      @apply text-sm border text-bar-600 bg-bar-100 border-bar-100;
-    }
-    &.ui-fill-generic {
-      @apply text-sm border text-gray-600 bg-gray-100 border-gray-100;
-    }
-
-    &.ui-outline-product {
-      @apply text-sm bg-white border text-product-600 border-product-600;
-    }
-    &.ui-outline-foo {
-      @apply text-sm bg-white border text-foo-600 border-foo-600;
-    }
-    &.ui-outline-bar {
-      @apply text-sm bg-white border text-bar-600 border-bar-600;
-    }
-    &.ui-outline-generic {
-      @apply text-sm bg-white border text-gray-600 border-gray-600;
-    }
+    @apply px-3 py-0 rounded-xl text-sm border border-black text-black;
   }
 
+  .ui-label-brand-face-fill-product {
+    @apply text-product-600 bg-product-100 border-product-100;
+  }
+  .ui-label-brand-face-fill-foo {
+    @apply text-foo-600 bg-foo-100 border-foo-100;
+  }
+  .ui-label-brand-face-fill-bar {
+    @apply text-bar-600 bg-bar-100 border-bar-100;
+  }
+  .ui-label-brand-face-fill-generic {
+    @apply text-gray-600 bg-gray-100 border-gray-100;
+  }
+
+  .ui-label-brand-face-outline-product {
+    @apply text-sm bg-white border text-product-600 border-product-600;
+  }
+  .ui-label-brand-face-outline-foo {
+    @apply text-sm bg-white border text-foo-600 border-foo-600;
+  }
+  .ui-label-brand-face-outline-bar {
+    @apply text-sm bg-white border text-bar-600 border-bar-600;
+  }
+  .ui-label-brand-face-outline-generic {
+    @apply text-sm bg-white border text-gray-600 border-gray-600;
+  }
+
+  [ui-label-brand-disabled] {
+    @apply opacity-50;
+  }
+}
+
+@layer components {
   .ui-callout {
     @apply text-callout-700 border border-callout-700 bg-callout-300 p-4 rounded-lg;
-
-    .ui-callout-caption {
-      @apply font-bold;
-      font-size: var(--base-font-size);
-    }
-    .ui-callout-body {
-      @apply leading-6;
-    }
-    .ui-callout-link {
-      @apply underline hover:text-callout-900;
-    }
   }
+  .ui-callout-caption {
+    @apply font-bold;
+    font-size: var(--base-font-size);
+  }
+  .ui-callout-body {
+    @apply leading-6;
+  }
+  .ui-callout-link {
+    @apply underline hover:text-callout-900;
+  }
+}
 
+@layer components {
   .ui-loading {
     @apply bg-gray-200 rounded-lg text-gray-400 p-10 text-sm flex gap-4 items-center justify-center;
   }
