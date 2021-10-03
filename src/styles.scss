@@ -132,7 +132,7 @@
     @apply text-sm bg-white border text-gray-600 border-gray-600;
   }
 
-  [ui-label-brand-disabled] {
+  .ui-label-brand-disabled {
     @apply opacity-50;
   }
 }
